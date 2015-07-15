@@ -1,0 +1,34 @@
+; cPanel first:11.25.0-RELEASE_43473 latest:11.25.0-NIGHTLY_43357 Cpanel::ZoneFile::VERSION:1.3 mtime:1365147592 hostname:www.hostingnow.jp
+; Zone file for agentgate.jp
+$TTL 14400
+agentgate.jp.   86400   IN      SOA     ns1.hostingnow.jp.      rs.cuon.co.jp.  (
+                                                2013040500 ;Serial Number
+                                                86400 ;refresh
+                                                7200 ;retry
+                                                3600000 ;expire
+                                                86400 ;minimum
+        )
+
+agentgate.jp.   86400   IN      NS      ns1.hostingnow.jp.
+agentgate.jp.   86400   IN      NS      ns2.hostingnow.jp.
+
+
+agentgate.jp.   300     IN      A       210.224.176.172
+
+localhost       14400   IN      A       127.0.0.1
+
+agentgate.jp.   14400   IN      MX      0       agentgate.jp.
+
+mail    14400   IN      CNAME   agentgate.jp.
+ftp     300     IN      A       210.224.176.172
+ucs     300     IN      A       210.224.176.172
+www.ucs 300     IN      A       210.224.176.172
+file    300     IN      A       210.224.176.172
+www.file        300     IN      A       210.224.176.172
+www.file        300     IN      A       210.224.176.172
+asahi-ekiden    14400   IN      A       210.224.176.172
+www.asahi-ekiden        14400   IN      A       210.224.176.172
+www     300     IN      CNAME   agentgate.jp.
+agentgate.jp.   86400   IN      TXT     "v=spf1 ip4:210.224.176.172 ~all"
+agentgate.jp.   300     IN      TXT     "v=spf1 include:_spf.google.com ~all"
+

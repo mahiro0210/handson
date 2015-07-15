@@ -1,0 +1,21 @@
+; cPanel first:11.24.5-RELEASE_38506 latest:11.25.0-NIGHTLY_43357 Cpanel::ZoneFile::VERSION:1.3 mtime:1301897065 hostname:www.hostingnow.jp
+; Zone file for hostingnow.jp
+$TTL 14400
+hostingnow.jp.  86400   IN      SOA     ns1.hostingnow.jp.      rs.cuon.co.jp.  (
+                                                2009120808 ;Serial Number
+                                                86400 ;refresh
+                                                7200 ;retry
+                                                3600000 ;expire
+                                                86400 ;minimum
+        )
+hostingnow.jp.  86400   IN      NS      ns1.hostingnow.jp.
+hostingnow.jp.  86400   IN      NS      ns2.hostingnow.jp.
+hostingnow.jp.  14400   IN      A       112.78.199.218
+localhost       14400   IN      A       127.0.0.1
+hostingnow.jp.  14400   IN      MX      0       mail2.hostingnow.jp.
+mail    14400   IN      CNAME   hostingnow.jp.
+ftp     14400   IN      CNAME   hostingnow.jp.
+www     14400   IN      A       112.78.199.218
+ns1     14400   IN      A       112.78.199.218
+ns2     14400   IN      A       112.78.199.218
+mail2   14400   IN      A       112.78.200.170

@@ -1,0 +1,10 @@
+ require "rubygems"
+ require "dnsruby"
+
+ TARGETNAME="twitter.com"
+ NAMESERVER="8.8.8.8"
+ resolver = Dnsruby::Resolver.new(:nameserver=>NAMESERVER)
+ answers = resolver.query(TARGETNAME).answer
+ answers.each do |answer|
+   print "#{answer.type.to_s} : #{answer.to_s}\n"
+ end

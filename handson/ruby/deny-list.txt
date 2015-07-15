@@ -1,0 +1,3 @@
+set address deny-host1 ip-netmask 1.1.1.1
+set address deny-host2 ip-netmask 2.2.2.2
+set address deny-host3 ip-netmask 3.3.3.3

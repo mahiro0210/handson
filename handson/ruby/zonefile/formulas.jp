@@ -1,0 +1,41 @@
+; cPanel first:11.25.0-NIGHTLY_43357 latest:11.25.0-NIGHTLY_43357 Cpanel::ZoneFile::VERSION:1.3 mtime:1416921005 hostname:www.hostingnow.jp
+; Zone file for formulas.jp
+$TTL 14400
+formulas.jp.    86400   IN      SOA     ns1.hostingnow.jp.      rs.cuon.co.jp.  (
+                                                2014112500 ;Serial Number
+                                                86400 ;refresh
+                                                7200 ;retry
+                                                3600000 ;expire
+                                                86400 ;minimum
+        )
+
+formulas.jp.    86400   IN      NS      ns1.hostingnow.jp.
+formulas.jp.    86400   IN      NS      ns2.hostingnow.jp.
+
+
+formulas.jp.    300     IN      A       210.224.176.174
+
+localhost       14400   IN      A       127.0.0.1
+
+formulas.jp.    14400   IN      MX      0       formulas.jp.
+
+mail    14400   IN      CNAME   formulas.jp.
+www     14400   IN      CNAME   formulas.jp.
+ftp     14400   IN      CNAME   formulas.jp.
+adm     14400   IN      A       14.128.17.225
+opr     14400   IN      A       14.128.17.226
+track   14400   IN      A       122.212.41.133
+opr     14400   IN      A       14.128.17.229
+rp      14400   IN      A       14.128.17.228
+sadm    14400   IN      A       14.128.17.232
+strack  14400   IN      A       122.212.41.133
+strack  14400   IN      A       122.216.29.102
+opr     14400   IN      A       14.128.17.238
+imgsrc01        14400   IN      A       14.128.17.227
+imgsrc01        14400   IN      A       14.128.17.230
+sadm    14400   IN      A       14.128.17.231
+img01   14400   IN      CNAME   img01.formulas.jp.edgesuite.net.
+imgcdn01        14400   IN      A       182.171.70.225
+mgtcdn01        14400   IN      A       182.171.70.226
+zabbix  14400   IN      A       14.128.17.225
+

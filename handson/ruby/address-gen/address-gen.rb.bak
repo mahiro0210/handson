@@ -1,0 +1,33 @@
+# -*- coding: utf-8 -*-
+
+inf = open("address.txt")
+outf = open("deny-list.txt", "w")
+
+table = {}
+
+i=0
+inf.each_line { |line| 
+  table.store("deny-host#{i += 1}" , line)
+} 
+
+table.each{ |key, value|
+  print(key + "=>", value)
+}
+
+inf.close
+outf.close
+
+inf2 = open("address.txt")
+outf2 = open("deny-group.txt", "w")
+
+outf2.write "set address-group deny-hosts static ["
+
+inf2.each_line { |line|
+  outf2.write $line
+}
+
+outf2.write "]"
+
+inf.close
+outf.close
+outf2.close

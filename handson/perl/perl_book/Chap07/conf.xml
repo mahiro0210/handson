@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<conf>
+    <dir>C:/sample/labo</dir>
+    <hosts>
+        <host1 ip="123.45.68.12" />
+        <host2 ip="45.122.34.45" />
+    </hosts>
+</conf>
